@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&family=Raleway:wght@200;300;400&display=swap');
+:root {
+    --violet: #B026FF;
+    --vertsp:#A9FFCB;
+}
+@font-face {
+    font-family: "electroharmonix";
+    src: url(police/electroharmonix.ttf) format("truetype");
+}
+@font-face {
+    font-family: "nuku1";
+    src: url(./police/nuku1.ttf) format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+
+}
+
+            /******** NAV ***********/
+.navbar {
+    height: 6vh;
+    width: 100%;
+    border: 1px solid var(--violet);
+}
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2{
+    font-family: "electroharmonix";
+    padding-left: 15px;
+    color: var(--violet);
+    font-size: 1.9rem;
+    margin: 0;
+}
+nav h2 a {
+    text-decoration: none;
+    color: var(--violet);
+    cursor:text;
+}
+.navlink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    width: 50%;
+    height: 100%;
+}
+.navlink a {
+    text-decoration: none;
+    font-family: "nuku1";
+    font-size: 1.5rem;
+    color: var(--violet);
+    transition: 0.3s ease-in-out;
+}
+.navlink a:hover {
+    color: white;
+}
+#main-section{
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
+    margin-top: 3vh;
+}
+.grand-container {
+    height: 100%;
+    width: 100%;
+}
+.nom-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    width: 100%;
+    background:  black;
+    z-index: 0;
+}
+.nom-container h2 {
+    font-family: "nuku1";
+    padding-left: 50px;
+    font-size: 2rem;
+    z-index: 2;
+    color: var(--violet);
+    
+}
+.ligne-underh2 {
+    position: absolute;
+    top: 55px;
+    left: 100px;
+    height: 3px;
+    width: 80%;
+    min-width: 20%;
+    z-index: 1;
+    background: var(--violet);
+
+}
+#chevron {
+    color: var(--violet);
+    font-size: 2rem;
+    padding-right: 250px;
+    animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+        50%{
+        padding-bottom: 20px;
+        
+    }
+    100% {
+        padding-bottom: none;
+    }
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    background:  black;
+    opacity: 0;
+    animation: fonduApparition 2s  2s linear forwards;
+
+}
+.info-container h2 {
+    font-family: "nuku1";
+    padding-left: 50px;
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+#info-p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 1.2rem;
+    z-index: 3;
+    border: 1px solid var(--violet);
+}
+.infocorner::before, .infocorner::after{
+    position: absolute;
+    background: black;
+    z-index: 1;
+    transition: 1s;
+    content: '';
+}
+.infocorner::before{
+    top: 12px;
+    left: -20px;
+    height: 60px;
+    width: 850px;
+}
+.infocorner::after {
+    top: -5px;
+    left: 8px;
+    height: 100px;
+    width: 780px;
+}
+#info-p p {
+    z-index: 2;
+    margin: 0;
+    padding: 8px;
+    color: white;
+}
+.midle-container {
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    background: black;
+}
+.formationcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 35%;
+    background: black;
+
+
+}
+.loisir-container{
+    height: 16vh;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.forma {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--violet);
+    padding: 5px;
+}
+.pox{
+    opacity: 0;
+    animation: fonduApparition 2s  2s linear forwards;
+}
+.forma h2 {
+    z-index: 3;
+    font-family: "nuku1";
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+.forma ul {
+    z-index: 3;
+    list-style: none;
+    padding: 0;
+}
+.forma ul li {
+    margin: 2px;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: white;
+}
+.pox::before, .pox::after {
+    position: absolute;
+    background: black;
+    z-index: 0;
+    transition: 1s;
+    content: '';
+}
+.pox::before {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 135px;
+    width: 300px;
+
+}
+.pox::after{
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 200px;
+    width: 248px;
+}
+.dragon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 30px;
+    border: 2px solid var(--violet);
+    border-radius: 100%;
+
+}
+.fa-dragon {
+    font-size: 7rem;
+    margin: 5px;
+    color: var(--violet);
+
+    animation: flicker 1.5s infinite alternate;
+    animation-delay: 1s;
+}
+
+.loisirs {
+    opacity: 0;
+    animation: fonduApparition 2s  2s linear forwards;
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    border: 2px solid var(--violet);
+    padding: 5px;
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 7px #f09,
+        0 0 10px #f09,
+        0 0 21px #f09,
+        0 0 42px #f09,
+        0 0 82px #f09,
+        0 0 92px #f09,
+        0 0 102px #f09,
+        0 0 151px #f09; 
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+.loisirs ul {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.loisirs ul li {
+    color: white;
+    margin: 2px;
+}
+.loisirs h2 {
+    position: relative;
+    z-index: 3;
+    font-family: "nuku1";
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+.paf::before, .paf::after{
+    position: absolute;
+    background: black;
+    z-index: 0;
+    transition: 1s;
+    content: '';
+}
+.paf::before {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 100px;
+    width: 320px;
+}
+.paf::after {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 150px;
+    width:250px;
+}
+.fonduApparition {
+    opacity: 0;
+    animation: fonduApparition 2s  4s linear forwards;
+}
+@keyframes fonduApparition {
+    100% {
+        opacity: 1;
+    }
+}

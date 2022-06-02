@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&family=Raleway:wght@200;300;400&display=swap');
+:root {
+    --violet: white;
+    --vertsp:#A9FFCB;
+}
+@font-face {
+    font-family: "electroharmonix";
+    src: url(police/electroharmonix.ttf) format("truetype");
+}
+@font-face {
+    font-family: "nuku1";
+    src: url(./police/nuku1.ttf) format("truetype");
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    margin: 0;
+}
+.navbar {
+    height: 6vh;
+    width: 100%;
+    border: 1px solid var(--violet);
+    margin: auto;
+}
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2{
+    font-family: "electroharmonix";
+    padding-left: 15px;
+    color: var(--violet);
+    font-size: 1.9rem;
+    margin: 0;
+}
+nav h2 a {
+    text-decoration: none;
+    color: var(--violet);
+    cursor:text;
+}
+.navlink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    width: 50%;
+    height: 100%;
+}
+.navlink a {
+    text-decoration: none;
+    font-family: "nuku1";
+    font-size: 1.5rem;
+    color: var(--violet);
+    transition: 0.3s ease-in-out;
+}
+.navlink a:hover {
+    color: white;
+}
+.video-container {
+    position: relative;
+    top: -65px;
+    left: 0;
+    height: 105vh;
+    width: 100%;
+    background: #A9FFCB;
+    z-index: -1;
+}
+.showcase {
+    position:absolute ;
+    top: -40vh;
+    left: -40wh;
+}
+
+
+
