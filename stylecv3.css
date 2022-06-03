@@ -13,50 +13,106 @@
 }
 * {
     box-sizing: border-box;
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
-body {
+body, html {
     background: black;
+    cursor: none;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
+/***************************************************/
+/************     NAVBAR    ***********************/
+/***************************************************/
+
+
 .navbar {
+    z-index: 3;
     height: 6vh;
     width: 100%;
-    border: 1px solid var(--violet);
+    cursor: none;
 }
 nav {
+    z-index: 3;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid yellow;
+    cursor: none;
 }
 nav h2{
+    z-index: 3;
     font-family: "electroharmonix";
     padding-left: 15px;
-    color: var(--violet);
-    font-size: 1.9rem;
+    color: yellow;
+    font-size: 2.5rem;
     margin: 0;
+    cursor: none;
 }
 nav h2 a {
+    z-index: 3;
     text-decoration: none;
-    color: var(--violet);
-    cursor:text;
+    color: yellow;
+    cursor: text;
+    cursor: none;
 }
 .navlink {
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 15px;
-    width: 50%;
+    gap: 50px;
+    padding-right: 50px;
+    width: 30%;
     height: 100%;
+    cursor: none;
 }
 .navlink a {
+    z-index: 3;
     text-decoration: none;
     font-family: "nuku1";
-    font-size: 1.5rem;
-    color: var(--violet);
+    font-size: 2rem;
+    color: yellow;
     transition: 0.3s ease-in-out;
+    cursor: none;
 }
 .navlink a:hover {
-    color: white;
+    z-index: 3;
+    color: #B026FF;
+    cursor: none;
+}
+.cursor {
+    position: fixed;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f03e3e;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    cursor: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+}
+.cursor2 {
+  position: fixed;
+  z-index: 5;
+  width: 8px;
+  height: 8px;
+  background-color: yellow;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  cursor: none;
+  transform: translate(-50%, -50%);
 }

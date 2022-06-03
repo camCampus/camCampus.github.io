@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&family=Noto+Sans+JP:wght@900&family=Press+Start+2P&family=Raleway:wght@200;300;400&display=swap');
+:root {
+    --violet: white;
+    --vertsp:#A9FFCB;
+}
+@font-face {
+    font-family: "electroharmonix";
+    src: url(police/electroharmonix.ttf) format("truetype");
+}
+@font-face {
+    font-family: "nuku1";
+    src: url(./police/nuku1.ttf) format("truetype");
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    overflow: hidden; 
+    background-color: #310e68;
+    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    cursor: none;
+}
+
+
+/***************************************************/
+/************     NAVBAR    ***********************/
+/***************************************************/
+
+
+.navbar {
+    z-index: 3;
+    height: 6vh;
+    width: 100%;
+    cursor: none;
+}
+nav {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid yellow;
+    cursor: none;
+}
+nav h2{
+    z-index: 3;
+    font-family: "electroharmonix";
+    padding-left: 15px;
+    color: yellow;
+    font-size: 2.5rem;
+    margin: 0;
+    cursor: none;
+}
+nav h2 a {
+    z-index: 3;
+    text-decoration: none;
+    color: yellow;
+    cursor: text;
+    cursor: none;
+}
+.navlink {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-right: 50px;
+    width: 30%;
+    height: 100%;
+    cursor: none;
+}
+.navlink a {
+    z-index: 3;
+    text-decoration: none;
+    font-family: "nuku1";
+    font-size: 2rem;
+    color: yellow;
+    transition: 0.3s ease-in-out;
+    cursor: none;
+}
+.navlink a:hover {
+    z-index: 3;
+    color: #B026FF;
+    cursor: none;
+}
+
+
+
+/***************************************************/
+/************   INFO SECTION ***********************/
+/***************************************************/
+
+
+
+.main-box {
+    height: fit-content;
+    width: 100%;
+}
+.left-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    margin: auto;
+}
+.portal-box {
+    margin-top: 50px;
+    width: 100%;
+    height: 280px; 
+    border: 0;
+    outline: none;
+    background-color: yellow;
+    position: relative;
+    font-family: Tomorrow, sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    color: white;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+.portal-border {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: black;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+.portal-menu {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+.portal-titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid white;
+}
+.portal-jap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid white;
+}
+#time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: "Raleway";
+    color: white;
+    border-right:1px solid white ;
+}
+.portal-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    font-size: 2.5rem;
+    margin-left: 30px;
+
+}
+.rot-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 330px;
+    height: 100%;
+    width: 50px;
+    font-size: 2rem;
+    animation: rota 3s infinite forwards;
+}
+@keyframes rota {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+.portal-content {
+    z-index: 2;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:20px ;
+
+}
+.info {
+    height: 100%;
+    width: 50%;
+    z-index: 5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.info h3 {
+    padding: 10px;
+}
+.info p {
+    font-family: "Cairo";
+    width: fit-content;
+    line-height: 10px;
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+
+
+/***************************************************/
+/************   MIDLE SECTION ***********************/
+/***************************************************/
+
+
+.midle-section {
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+.experience {
+    height: 300px;
+    width: 600px;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.xp2 {
+    width: 100%;
+    height: 100%; 
+    border: 0;
+    outline: none;
+    background-color: yellow;
+    position: relative;
+    font-family: Tomorrow, sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    color: white;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+
+}
+.xp3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: black;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+
+}
+.xp4 {
+    width: 100%;
+    height: 100%; 
+    border: 0;
+    outline: none;
+    background-color: yellow;
+    position: relative;
+    font-family: Tomorrow, sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    color: white;
+    clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+.midle-title {
+    font-family:'Press Start 2P', cursive ;
+    margin-top:10px;
+    margin-bottom: 25px;
+}
+.txt-midle {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt-midle p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: "Cairo";
+    line-height: 25px;
+}
+
+
+
+/***************************************************/
+/************** CURSOR *****************************/
+/****************************************************/
+
+
+
+.cursor {
+    position: fixed;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f03e3e;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+}
+.cursor2 {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  height: 100px;
+  width: 100px;
+  font-size: 1.5rem;
+  color: white;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.fa-skull-cow {
+    font-size: 2rem;
+    color: black;
+    z-index: 6;
+}

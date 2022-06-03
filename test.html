@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <h2>curriculum vit<a id="secreta" href="./secretpage.html">a</a></a>e</h2>
+            <div class="navlink">
+                <a href="./index.html">Accueil</a>
+                <a href="./test.html">John</a>
+                <a href="./pagecv2.html">Maurice</a>
+                <a href="./pagecv3.html">Marion</a>
+            </div>
+        </nav>
+    </header>
+    <section class="main-box">
+        <div class="left-box">
+            <div class="portal-box">
+                <div class="portal-border">
+                    <div class="portal-menu">
+                        <div class="portal-titre">
+                            <h2>Infos</h2>
+                        </div>
+                        <div class="portal-jap">
+                            <h2>人類社会のす</h2>
+                        </div>
+                        <div id="time">
+                            <script type="text/javascript" language="javascript"> 
+                                d = new Date(); 
+                                document.write(d.toLocaleTimeString()); 
+                              </script>
+                        </div>
+                        <div class="portal-logo">
+                            <i class="fa-brands fa-galactic-senate"></i>
+                        </div>
+                        <div class="rot-logo">
+                            <i class="fa-solid fa-dice-d20"></i>
+                        </div>
+                    </div>
+
+                    <div class="portal-content">
+                        <div class="info">
+                            <h3>Nom:</h3><p>Doe</p>
+                            <h3>Prenom:</h3><p>John</p>
+                            <h3>Age:</h3><p>102</p>
+                        </div>
+                        <div class="info">
+                            <h3>Adresse:</h3><p>Annecy</p>
+                            <h3>Mail:</h3><p>johndoe@gmail.fr</p>
+                            <h3>Tel:</h3><p>0102030405</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="midle-section">
+        <div class="experience">
+            <div class="xp2">
+                <div class="xp3">
+                    <div class="txt-midle">
+                        <h3 class="midle-title">Experiences</h3>
+                        <p>Peintre en girafes pendant 70 ans à l'atelier expérimental d'annecy</p>
+                        <p>Coupeur de pelouze au scalpel pendant 20 ans au stade de france </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="xp2">
+                <div class="xp3">
+                    <div class="txt-midle">
+                        <h3 class="midle-title">Formations</h3>
+                        <p>Haute école de cirque unijambiste</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="experience">
+            <div class="xp4">
+                <div class="xp3">
+                    <div class="txt-midle">
+                        <h3 class="midle-title">Loisirs</h3>
+                        <p class="lol">Tête ronde à l'expression vive, il est devenu au fil du temps un personnage très populaire en Europe et aux États-Unis.<br>Il a un tempérament très apprécié. De plus, il ne se montre pas gourmand en entretien ni en nourriture.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cursor">
+    </div>
+    <div class="cursor2">
+        <i class="fa-solid fa-skull"></i>
+    </div>
+</body>
+<script>
+var cursor = document.querySelector(".cursor");
+var cursor2 = document.querySelector(".cursor2");
+
+document.addEventListener("mousemove", function(e){
+    cursor.style.cssText = cursor2.style.cssText = "left:" + e.clientX + "px; top: " + e.clientY + "px;";
+
+})
+</script>
+</html>
+
+
+
+

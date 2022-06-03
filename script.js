@@ -24,3 +24,10 @@ function rainFall(){
         waterDrop.remove()
     }, 6000)
 }
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+  
