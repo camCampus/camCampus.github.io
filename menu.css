@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&family=Noto+Sans+JP:wght@900&family=Press+Start+2P&family=Raleway:wght@200;300;400&display=swap');
+:root {
+    --violet: white;
+    --vertsp:#A9FFCB;
+}
+@font-face {
+    font-family: "electroharmonix";
+    src: url(police/electroharmonix.ttf) format("truetype");
+}
+@font-face {
+    font-family: "nuku1";
+    src: url(./police/nuku1.ttf) format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.menu-container {
+    height: 100vh;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 20vh;
+    border: 1px solid black;
+    font-size: 5vw;
+}
+.menu-container ul {
+    list-style: none;
+}
+.menu-container li a {
+    text-decoration: none;
+    color: black;
+    font-family: "electroharmonix";
+}
+@media screen and (max-width:950px) {
+    .menu-container {
+        font-size: 8vw;
+    }
+}

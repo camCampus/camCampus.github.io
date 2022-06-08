@@ -1,6 +1,7 @@
 const body = document.body;
 var cursor = document.querySelector(".cursor");
 var cursor2 = document.querySelector(".cursor2");
+var burgerA = document.querySelector('.burgerA');
 
 document.addEventListener("mousemove", function(e){
     cursor.style.cssText = cursor2.style.cssText = "left:" + e.clientX + "px; top: " + e.clientY + "px;";
@@ -31,3 +32,10 @@ function checkTime(i) {
     return i;
   }
   
+burgerA.addEventListener('click', e => {
+
+    let target = e.target.target;
+
+    console.log(target);
+})
+
