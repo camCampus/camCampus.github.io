@@ -12,21 +12,28 @@
     src: url(./police/nuku1.ttf) format("truetype");
 }
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 body {
     cursor: none;
     height: 100vh;
-    overflow: hidden;
     background: url(./img/wp3102477-neon-city-wallpapers.jpg) no-repeat;
-}
-.navbar {
-    z-index: 3;
-    height: 6vh;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
     width: 100%;
 
 }
-nav {
+/*.navbar {
+    z-index: 3;
+    height: 6vh;
+    width: 100%;
+    min-width: 300px;
+
+}*/
+/*nav {
     z-index: 3;
     height: 100%;
     width: 100%;
@@ -34,13 +41,48 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid yellow;
+    min-width: 300px;
+}*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 6vh;
+  border-bottom: 1px solid yellow;
+  width: 98%;
+  margin: auto;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  padding-right:15px;
+
+}
+nav li {
+  list-style: none;
+}
+nav li a {
+  z-index: 3;
+  text-decoration: none;
+  font-family: "nuku1";
+  font-size: 2rem;
+  color: yellow;
+  transition: 0.3s ease-in-out;
+  cursor:none;
+}
+nav li a:hover {
+  z-index: 3;
+  color: #B026FF;
 }
 nav h2{
     z-index: 3;
     font-family: "electroharmonix";
     padding-left: 15px;
     color: yellow;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     margin: 0;
 }
 nav h2 a {
@@ -49,7 +91,7 @@ nav h2 a {
     color: yellow;
     cursor:none;
 }
-.navlink {
+/*.navlink {
     z-index: 3;
     display: flex;
     align-items: center;
@@ -58,7 +100,8 @@ nav h2 a {
     padding-right: 50px;
     width: 30%;
     height: 100%;
-}
+    min-width: 300px;
+}*/
 .navlink a {
     z-index: 3;
     text-decoration: none;
@@ -72,7 +115,16 @@ nav h2 a {
     z-index: 3;
     color: #B026FF;
 }
-
+.burger {
+  display: none;
+}
+.burger div {
+  width: 30px;
+  height: 3px;
+  background: yellow;
+  margin: 4px;
+  border-radius: 5px;
+}
 
 
 /*rain bg */
@@ -90,13 +142,13 @@ nav h2 a {
 }
 
 
-
+/*  TITRE   */
 
 .inf{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 15vh;
     text-align: center;
 }
 .glitch-bloc {
@@ -104,10 +156,12 @@ nav h2 a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-width: 300px;
 }
 .glitchedAnim, .invisible-text {
     font-family: "electroharmonix";
-    font-size: 250px;
+    font-size: 15vw;
     font-weight: bold;
     line-height: 1.1;
 }
@@ -131,12 +185,14 @@ nav h2 a {
     color: #f1f1f1;
     animation: glitchAnim1 3s infinite;
 }
+
+
 @keyframes glitchAnim1 {
     7% {
       transform: none;
     }
     10% {
-      transform: translate(6px, -2px);
+      transform: translate(3px, -1px);
     }
     13% {
       transform: none;
@@ -145,7 +201,7 @@ nav h2 a {
       transform: none;
     }
     23% {
-      transform: translate(-12px, -7px);
+      transform: translate(-6px, -4px);
     }
     26% {
       transform: none;
@@ -154,7 +210,7 @@ nav h2 a {
       transform: none;
     }
     43% {
-      transform: translate(10px, -9px);
+      transform: translate(5px, -4px);
     }
     46% {
       transform: none;
@@ -163,7 +219,7 @@ nav h2 a {
       transform: none;
     }
     68% {
-      transform: translate(7px, 5px);
+      transform: translate(3px, 2px);
     }
     71% {
       transform: none;
@@ -180,7 +236,7 @@ nav h2 a {
       transform: none;
     }
     10% {
-      transform: translate(-6px, 2px);
+      transform: translate(-3px, 1px);
     }
     13% {
       transform: none;
@@ -189,7 +245,7 @@ nav h2 a {
       transform: none;
     }
     23% {
-      transform: translate(12px, 7px);
+      transform: translate(6px, 4px);
     }
     26% {
       transform: none;
@@ -198,7 +254,7 @@ nav h2 a {
       transform: none;
     }
     43% {
-      transform: translate(-10px, 9px);
+      transform: translate(-5px, 4px);
     }
     46% {
       transform: none;
@@ -207,7 +263,7 @@ nav h2 a {
       transform: none;
     }
     68% {
-      transform: translate(-7px, 5px);
+      transform: translate(-4px, 2px);
     }
     71% {
       transform: none;
@@ -224,7 +280,7 @@ nav h2 a {
       transform: none;
     }
     23% {
-      transform: skew(5deg, -5deg) translate(10px, 5px);
+      transform: skew(2deg, -2deg) translate(5px, 2px);
     }
     26% {
       transform: none;
@@ -233,7 +289,7 @@ nav h2 a {
       transform: none;
     }
     43% {
-      transform: skew(5deg, -10deg) translate(-5px, 2px);
+      transform: skew(3deg, -3deg) translate(-5px, 2px);
     }
     46% {
       transform: none;
@@ -242,7 +298,6 @@ nav h2 a {
       transform: none;
     }
   }
-
 
 
   /*cursor*/
@@ -275,10 +330,14 @@ nav h2 a {
 
 .choice {
 
-    width: fit-content;
+    width: 60%;
+    min-width: 300px;
     padding: 15px;
     margin: auto;
-    margin-top: 50vh;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .cyber {
     cursor: none;
@@ -290,7 +349,7 @@ nav h2 a {
     cursor: pointer;
     position: relative;
     font-family: Tomorrow, sans-serif;
-    font-size: .85rem;
+    font-size: .85vw;
     text-transform: uppercase;
     color: black;
     margin-left: 25px;
@@ -309,11 +368,50 @@ nav h2 a {
     bottom: 2px;
     background-color: yellow;
     transition: .1s ease-in-out;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     color: black;
     font-family: 'Press Start 2P', cursive;
     clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
 .cyber-content:hover {
     background-color: #f03e3e;
+}
+
+
+
+
+
+
+/*******************************************************
+********************************************************
+**********************************************************
+***********************************************************/
+
+@media screen and (max-width: 950px){
+  nav ul {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  nav h2 {
+    font-size: 4vw;
+  }
+  .choice {
+    flex-direction: column;
+    margin-top: 10vh;
+  }
+  .cyber {
+    width: 50%;
+    margin-top: 15px;
+  }
+  
+}
+@media screen and (max-width: 590px){
+  nav h2 {
+    font-size: 6vw;
+  }
+  .cyber-content {
+    font-size: 3vw;
+  }
 }

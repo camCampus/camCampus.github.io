@@ -352,7 +352,6 @@ nav h2 a {
   transform: translate(-50%, -50%);
 }
 .fa-skull-cow {
-    font-size: 2rem;
     color: black;
     z-index: 6;
 }
