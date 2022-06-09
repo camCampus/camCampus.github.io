@@ -26,24 +26,6 @@ body {
     width: 100%;
 
 }
-/*.navbar {
-    z-index: 3;
-    height: 6vh;
-    width: 100%;
-    min-width: 300px;
-
-}*/
-/*nav {
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid yellow;
-    min-width: 300px;
-}*/
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -116,6 +98,7 @@ nav h2 a {
 }
 .burgerA {
   z-index: 4;
+  display: none;
 }
 
 
@@ -386,6 +369,9 @@ nav h2 a {
   .burger {
     display: block;
   }
+  .burgerA{
+    display: block;
+  }
   nav h2 {
     font-size: 4vw;
   }
@@ -396,6 +382,7 @@ nav h2 a {
   .cyber {
     width: 50%;
     margin-top: 15px;
+    height: 50px;
   }
   
 }
@@ -405,5 +392,8 @@ nav h2 a {
   }
   .cyber-content {
     font-size: 3vw;
+  }
+  .cyber {
+    height: 50px;
   }
 }

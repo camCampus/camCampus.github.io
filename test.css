@@ -99,7 +99,11 @@ nav {
     margin: 4px;
     border-radius: 5px;
   }
-
+  .burgerA {
+    z-index: 4;
+    display: none;
+  }
+  
 
 
 /***************************************************/
@@ -111,17 +115,21 @@ nav {
 .main-box {
     height: fit-content;
     width: 100%;
+    min-width: 300px;
 }
 .left-box {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 60%;
+    min-width: 300px;
     margin: auto;
+    border: 1px solid white;
 }
 .portal-box {
     margin-top: 50px;
     width: 100%;
+    min-width: 300px;
     height: 280px; 
     border: 0;
     outline: none;
@@ -149,6 +157,7 @@ nav {
     display: flex;
     height: 60px;
     width: 100%;
+    min-width: 300px;
     border-bottom: 1px solid white;
 }
 .portal-titre {
@@ -158,8 +167,9 @@ nav {
     font-size: 1rem;
     font-family: 'Press Start 2P', cursive;
     height: 100%;
-    width: 200px;
+    width: 20%;
     border-right: 1px solid white;
+    min-width: fit-content;
 }
 .portal-jap {
     display: flex;
@@ -168,38 +178,48 @@ nav {
     font-size: 0.7rem;
     font-family: 'Noto Sans JP', sans-serif;
     height: 100%;
-    width: 200px;
+    width: 20%;
     border-right: 1px solid white;
+    min-width: fit-content;
 }
 #time {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 200px;
+    width: 20%;
     font-size: 1.5rem;
     font-family: "Raleway";
     color: white;
     border-right:1px solid white ;
+    min-width: fit-content;
+}
+.div-menu-droite {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
 }
 .portal-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 50px;
+    width: fit-content;
     font-size: 2.5rem;
-    margin-left: 30px;
-
+    padding: 1vw;
 }
 .rot-logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 330px;
     height: 100%;
-    width: 50px;
+    width: fit-content;
     font-size: 2rem;
+}
+.rot-logo i {
     animation: rota 3s infinite forwards;
 }
 @keyframes rota {
@@ -367,3 +387,73 @@ nav {
     color: black;
     z-index: 6;
 }
+
+
+
+
+@media screen and (max-width: 950px){
+    nav ul {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+    .burgerA{
+      display: block;
+    }
+    nav h2 {
+      font-size: 4vw;
+    }
+    .portal-titre {
+        font-size: 1.5vw;
+    }
+    .portal-jap {
+        font-size: 1vw;
+    }
+    #time {
+        font-size: 2vw;
+    }
+    .portal-logo {
+        font-size: 3vw;
+        padding: 1vw;
+    }
+    .rot-logo{
+        font-size: 3vw;
+    }
+    .info {
+        font-size: 1.2vw;
+        margin-left: 50px;
+    }
+    .info p {
+        font-size: 1.5vw;
+    }
+
+  }
+  @media screen and (max-width: 590px){
+    nav h2 {
+      font-size: 6vw;
+    }
+    .portal-titre {
+        font-size: 1.7vw;
+    }
+    .portal-jap {
+        font-size: 1.5vw;
+    }
+    #time {
+        font-size: 2.5vw;
+    }
+    .portal-logo {
+        font-size: 3.5vw;
+        padding: 1vw;
+    }
+    .rot-logo{
+        font-size: 3.5vw;
+    }
+    .info {
+        font-size: 2vw;
+        margin-left: 30px;
+    }
+    .info p {
+        font-size: 2.2vw;
+    }
+  }
