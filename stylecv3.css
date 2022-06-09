@@ -11,6 +11,10 @@
     font-family: "nuku1";
     src: url(./police/nuku1.ttf) format("truetype");
 }
+@font-face {
+    font-family: "blowbrush";
+    src: url(./police/blowbrush.ttf) format("truetype");
+}
 * {
     box-sizing: border-box;
     cursor: none;
@@ -19,12 +23,11 @@
     box-sizing: border-box;
 
 }
-body, html {
+body {
     background: black;
     cursor: none;
-    height: 100vh;
+    height: 500vh;
     width: 100%;
-    overflow: hidden;
 }
 
 /***************************************************/
@@ -32,68 +35,87 @@ body, html {
 /***************************************************/
 
 
-.navbar {
-    z-index: 3;
-    height: 6vh;
-    width: 100%;
-    cursor: none;
-}
 nav {
-    z-index: 3;
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 6vh;
     border-bottom: 1px solid yellow;
-    cursor: none;
-}
-nav h2{
-    z-index: 3;
-    font-family: "electroharmonix";
-    padding-left: 15px;
-    color: yellow;
-    font-size: 2.5rem;
-    margin: 0;
-    cursor: none;
-}
-nav h2 a {
-    z-index: 3;
-    text-decoration: none;
-    color: yellow;
-    cursor: text;
-    cursor: none;
-}
-.navlink {
-    z-index: 3;
+    width: 98%;
+    margin: auto;
+  }
+  nav ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding-right: 50px;
-    width: 30%;
+    gap: 30px;
     height: 100%;
-    cursor: none;
-}
-.navlink a {
+    padding-right:15px;
+  
+  }
+  nav li {
+    list-style: none;
+  }
+  nav li a {
     z-index: 3;
     text-decoration: none;
     font-family: "nuku1";
     font-size: 2rem;
     color: yellow;
     transition: 0.3s ease-in-out;
-    cursor: none;
-}
-.navlink a:hover {
+    cursor:none;
+  }
+  nav li a:hover {
     z-index: 3;
     color: #B026FF;
-    cursor: none;
-}
+  }
+  nav h2{
+      z-index: 3;
+      font-family: "electroharmonix";
+      padding-left: 15px;
+      color: yellow;
+      font-size: 2.5vw;
+      margin: 0;
+  }
+  nav h2 a {
+      z-index: 3;
+      text-decoration: none;
+      color: yellow;
+      cursor:none;
+  }
+  .navlink a {
+      z-index: 3;
+      text-decoration: none;
+      font-family: "nuku1";
+      font-size: 2rem;
+      color: yellow;
+      transition: 0.3s ease-in-out;
+      cursor:none;
+  }
+  .navlink a:hover {
+      z-index: 3;
+      color: #B026FF;
+  }
+  .burger {
+    display: none;
+  }
+  .burger div {
+    width: 30px;
+    height: 3px;
+    background: yellow;
+    margin: 4px;
+    border-radius: 5px;
+  }
+  .burgerA {
+    z-index: 4;
+    display: none;
+  }
+
+
 .cursor {
     position: fixed;
     z-index: 5;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #f03e3e;
     border-radius: 50%;
     left: 0;
@@ -116,3 +138,128 @@ nav h2 a {
   cursor: none;
   transform: translate(-50%, -50%);
 }
+
+/**********************************************/
+/**********************************************/
+/**********************************************/
+/*********** scroll section *******************/
+
+.first {
+    height: 93.8vh;
+    width: 100%;
+    border: 1px solid red;
+}
+.scro {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    padding: 1vw;
+    margin: auto;
+    margin-top: 10vh;
+    font-family: "blowbrush" ;
+    font-size: 12vw;
+    color: #fff;
+    animation: flicker 1.5s infinite alternate;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #ffff00,
+        0 0 20px #ffff00,
+        0 0 30px #ffff00,
+        0 0 40px #ffff00,
+        0 0 50px #ffff00;
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #ffff00,
+        0 0 20px #ffff00,
+        0 0 30px #ffff00,
+        0 0 40px #ffff00,
+        0 0 50px #ffff00;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+
+.two {
+    height: 100vh;
+    width: 100%;
+    background: #A9FFCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overflo {
+    height: 500px;
+    width: 1200px;
+    overflow: hidden;
+}
+.animcontainer {
+    position: relative;
+    height: 500px;
+    width: 1200px;
+    border: 1px solid black;
+}
+#astro {
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+.trois {
+    height: 100vh;
+    width: 100%;
+    background: #f03e3e;
+}
+.quatre {
+    height: 100vh;
+    width: 100%;
+    background: #B026FF;
+}
+@media screen and (max-width: 950px){
+    nav ul {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+    .burgerA{
+      display: block;
+    }
+    nav h2 {
+      font-size: 4vw;
+    }
+    
+  }
+  @media screen and (max-width: 590px){
+    nav h2 {
+      font-size: 6vw;
+    }
+  }
+
+
+
+
+  .linecontainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    margin: auto;
+
+  }
+  svg {
+      display: inline-block;
+      height: 100%;
+  }
