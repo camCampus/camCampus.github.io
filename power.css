@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cairo:wght@200;300&family=Noto+Sans+JP:wght@900&family=Press+Start+2P&family=Raleway:wght@200;300;400&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #0d0745;
+    overflow-y: hidden;
+}
+.main-container {
+    text-align: center;
+    margin-top: 300px;
+    perspective: 1000px;
+}
+.title {
+    perspective: 1000px;
+}
+h1{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 10vw;
+    color: rgb(50, 255, 187);
+    transform-style: preserve-3d;
+    display: inline-flex;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+h1 span {
+    pointer-events: none;
+}
