@@ -36,26 +36,53 @@ body {
 
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 6vh;
-    border-bottom: 1px solid yellow;
-    width: 98%;
-    margin: auto;
-  }
-  nav ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    height: 100%;
-    padding-right:15px;
-  
-  }
-  nav li {
-    list-style: none;
-  }
-  nav li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 6vh;
+  border-bottom: 1px solid yellow;
+  width: 98%;
+  margin: auto;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  padding-right:15px;
+
+}
+nav li {
+  list-style: none;
+}
+nav li a {
+  z-index: 3;
+  text-decoration: none;
+  font-family: "nuku1";
+  font-size: 2rem;
+  color: yellow;
+  transition: 0.3s ease-in-out;
+  cursor:none;
+}
+nav li a:hover {
+  z-index: 3;
+  color: #B026FF;
+}
+nav h2{
+    z-index: 3;
+    font-family: "electroharmonix";
+    padding-left: 15px;
+    color: yellow;
+    font-size: 2.5vw;
+    margin: 0;
+}
+nav h2 a {
+    z-index: 3;
+    text-decoration: none;
+    color: yellow;
+    cursor:none;
+}
+.navlink a {
     z-index: 3;
     text-decoration: none;
     font-family: "nuku1";
@@ -63,52 +90,11 @@ nav {
     color: yellow;
     transition: 0.3s ease-in-out;
     cursor:none;
-  }
-  nav li a:hover {
+}
+.navlink a:hover {
     z-index: 3;
     color: #B026FF;
-  }
-  nav h2{
-      z-index: 3;
-      font-family: "electroharmonix";
-      padding-left: 15px;
-      color: yellow;
-      font-size: 2.5vw;
-      margin: 0;
-  }
-  nav h2 a {
-      z-index: 3;
-      text-decoration: none;
-      color: yellow;
-      cursor:none;
-  }
-  .navlink a {
-      z-index: 3;
-      text-decoration: none;
-      font-family: "nuku1";
-      font-size: 2rem;
-      color: yellow;
-      transition: 0.3s ease-in-out;
-      cursor:none;
-  }
-  .navlink a:hover {
-      z-index: 3;
-      color: #B026FF;
-  }
-  .burger {
-    display: none;
-  }
-  .burger div {
-    width: 30px;
-    height: 3px;
-    background: yellow;
-    margin: 4px;
-    border-radius: 5px;
-  }
-  .burgerA {
-    z-index: 4;
-    display: none;
-  }
+}
 
 
 .cursor {
