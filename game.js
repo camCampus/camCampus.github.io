@@ -31,6 +31,7 @@ var audio = new Audio("./son/Lapin_Crétin_Bwaaaa.mp3");
 		    gameContainer.appendChild(img);
             audio.autoplay = true;
             audio.loop = true;
+            
 		    img.addEventListener('mouseenter', () => {
 			    img.remove();
 		    })
@@ -50,9 +51,6 @@ var audio = new Audio("./son/Lapin_Crétin_Bwaaaa.mp3");
                     }
 				    
 			   }
-               // else {
-                //    console.log('aplus')
-              //  }
 	        })
 			
 			
