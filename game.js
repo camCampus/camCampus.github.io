@@ -29,7 +29,7 @@ var audio = new Audio("./son/Lapin_Crétin_Bwaaaa.mp3");
 		    img.style.top = (Math.random() * 6 )* 100 + 'px';
 		    img.classList.add('flymonster');
 		    gameContainer.appendChild(img);
-            audio.autoplay = true;
+            audio.play() ;
             audio.loop = true;
             
 		    img.addEventListener('mouseenter', () => {
